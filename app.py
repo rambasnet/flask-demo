@@ -18,8 +18,8 @@ def hello_world():
 @app.route('/dashboard', methods=['GET', 'POST', 'PUT', 'DELETE'])
 def dashboard():
   data = {
-    'title': 'Dashboard...',
-    'heading': 'see your stuff...'
+    'title': 'Dashboard',
+    'heading': 'see your stuff... <p> new content </p>'
   }
   if request.method == 'GET':
     return template(data)
