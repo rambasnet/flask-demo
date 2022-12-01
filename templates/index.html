@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ data['title'] }}</title>
+</head>
+<body>
+
+<h1>{{ data.title }}</h1>
+{% if data.email%}
+<p>Hello {{ data.email }}!</p>
+{% endif %}
+<p>Welcome to my Awesome App!</p>
+<a href="/">Home</a>
+<a href="/register">Register</a> &nbsp; &nbsp; 
+{% if data.email %}
+	<a href="/logout">Logout</a>
+{% else %}
+	<a href="/login">Login</a>
+{% endif %}
+</body>
+</html>
